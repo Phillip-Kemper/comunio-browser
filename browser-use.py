@@ -13,8 +13,8 @@ PASSWORD = os.getenv('PW')
 
 async def main():
     agent = Agent(
-        task=f"Go to comunio.com, click login, login with username {USERNAME} and password {PASSWORD}, click on my team and return all the players of my team",
-        llm=ChatOpenAI(model="gpt-4"), # removed the 'o' from model name
+        task=f"Go to comunio.de, click login, login with username {USERNAME} and password {PASSWORD}, click on my team and return all the players of my team",
+        llm=ChatOpenAI(model="gpt-4o"),
     )
     result = await agent.run()
     print(result)
